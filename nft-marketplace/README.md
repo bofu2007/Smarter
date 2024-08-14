@@ -1,24 +1,35 @@
-[![Open in Gitpod](https://img.shields.io/badge/Open_in-Gitpod-white?logo=gitpod)](https://gitpod.io/#FOLDER=nft-marketplace/https://github.com/gear-foundation/dapps)
-[![Docs](https://img.shields.io/github/actions/workflow/status/gear-foundation/dapps/contracts.yml?logo=rust&label=docs)](https://dapps.gear.rs/nft_marketplace_io)
+<p align="center">
+  <a href="https://gear-tech.io">
+    <img src="https://github.com/gear-tech/gear/blob/master/images/logo-grey.png" width="400" alt="GEAR">
+  </a>
+</p>
+<p align=center>
+    <a href="https://github.com/gear-tech/gear-js/blob/master/LICENSE"><img src="https://img.shields.io/badge/License-GPL%203.0-success"></a>
+</p>
+<hr>
 
-# [NFT marketplace](https://wiki.gear-tech.io/docs/examples/NFTs/nft-marketplace/marketplace/)
+## Description
 
-### 🏗️ Building
+React application of [NFT Marketplace](https://wiki.gear-tech.io/examples/marketplace) based on [NFT](https://github.com/gear-foundation/dapps/tree/master/contracts/non-fungible-token) and [Marketplace](https://github.com/gear-foundation/dapps/tree/master/contracts/nft-marketplace) Rust smart-contracts.
+
+## Getting started
+
+### Install packages:
 
 ```sh
-cargo b -p "nft-marketplace*"
+yarn install
 ```
 
-### ✅ Testing
+### Declare environment variables:
 
-Run all tests, except `gclient` ones:
-```sh
-cargo t -p "nft-marketplace*" -- --skip gclient
-```
+Create `.env` file, `.env.example` will let you know what variables are expected.
 
-Run all tests:
+In order for all features to work as expected, the node and it's runtime version should be chosen based on the current `@gear-js/api` version.
+
+In case of issues with the application, try to switch to another network or run your own local node and specify its address in the `.env` file. When applicable, make sure the smart contract(s) wasm files are uploaded and running in this network accordingly.
+
+### Run the app:
+
 ```sh
-# Download the node binary.
-cargo xtask node
-cargo t -p "nft-marketplace*"
+yarn start
 ```
